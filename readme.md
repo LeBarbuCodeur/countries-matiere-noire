@@ -47,11 +47,18 @@ La gestion de la navigation se fait avec Vue Router, ainsi que le stockage des d
 *  Clôner ce repo en local.
 *  Se rendre dans le dossier nouvellement créé.
 *  Lancer l'installation des modules NodeJs avec `npm i`
-*  Lancer l'installation des vendors PHP avec `composer i`
+*  Lancer l'installation des vendors PHP avec `composer install`
+*  Renommer le fichier `.env.example` en `.env`
+*  Dans un terminal, lancer la commande `php artisan key:generate`
 
 ### Lancer le projet en local
 
 *  Dans un terminal, lancer la commande `php artisan serve` et rendez-vous sur l'adresse indiquée.
+
+### Développer la partie front
+
+*  Dans un terminal, lancer la commande `npm run watch`. La compilation CSS et JS se fera automatiquement à chaque modification.
+*  Quand tout est bon, lancer la commande `npm run production`. Cela aura pour effet de compiler le CSS et le JS.
 
 ## Idées d'améliorations futures
 
