@@ -1,0 +1,4 @@
+@import './vendor/bulma.min.css';
+
+.card { box-shadow: 0 0 0; border: 0; width: 25%; float: left; padding: 1rem; max-height: 350px;}
+.hero { background-position: center; background-size: cover;}
