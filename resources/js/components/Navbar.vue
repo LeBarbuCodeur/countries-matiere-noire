@@ -4,7 +4,7 @@
             <router-link class="navbar-item" :to="{ name: 'home' }">
                 <p class="title is-4 is-uppercase">
                     <img src="/favicon.ico" />
-                    European countries
+                    Countries
                 </p>
             </router-link>
 
