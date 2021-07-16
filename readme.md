@@ -63,6 +63,8 @@ La gestion de la navigation se fait avec Vue Router, ainsi que le stockage des d
 ## Idées d'améliorations futures
 
 *  Internationaliser l'application.
+*  Ajouter une pagination sur la page principale pour alléger le chargement.
+*  Ajouter un champ "recherche" dans la barre de navigation.
 *  Pouvoir filtrer par pays avec un système de filtre dans la barre de navigation.
 *  Transformer la page qui présente le pays sous forme de dashboard interactif avec des données graphiques.
 *  Ajouter des tests unitaires en front et côté back.
