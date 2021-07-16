@@ -8,7 +8,7 @@
         </section>
 
         <div class="container">
-            <div class="content pt-5">
+            <div class="content p-5">
                 <p><b>Country :</b> {{ country.region }}</p>
                 <p><b>Region :</b> {{ country.subregion }}</p>
                 <p><b>Total population :</b> {{ country.population }} peoples</p>
