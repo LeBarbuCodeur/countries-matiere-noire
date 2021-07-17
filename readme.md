@@ -23,13 +23,22 @@ La gestion de la navigation se fait avec Vue Router, ainsi que le stockage des d
 
 #### GET /api/countries
 
-*  Cette route ne prend aucun paramètre. Elle récupère simplement les pays sur le site https://restcountries.eu.
+*  Cette route ne prend aucun paramètre.
+*  Elle récupère simplement les pays européens dans la base de données.
+
+#### GET /api/fetch-countries
+
+*  Cette route ne prend aucun paramètre.
+*  Elle met à jour ou ajoute les pays du site https://restcountries.eu dans la base de données.
+*  Cette route est conçue pour une mise à jour via cron job. Retour de succès ou d'erreur en JSON.
 
 ### Frontend
 
 #### <url>
 
 *  Page d'accueil de l'application. On y trouve une liste des pays récupérés ainsi que leurs drapeaux.
+
+*  Si la table 'countries' dans la base de données est vide, on lance la récupération et l'insertion en base avant d'arriver sur la page d'accueil.
 
 #### <url>/country/:code
 

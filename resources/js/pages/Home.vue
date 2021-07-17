@@ -1,10 +1,10 @@
 <template>
     <div class="container" v-if="countries">
         <div class="card" v-for="country in countries" :key="country.name">
-            <router-link :to="'country/' + country.alpha3Code.toLowerCase()">
+            <router-link :to="'country/' + country.code">
                 <div class="card-image">
                     <figure class="image is-4by3">
-                        <img :src="country.flag" :alt="country.alpha3Code">
+                        <img :src="country.flag" :alt="country.code">
                     </figure>
                 </div>
 

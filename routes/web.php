@@ -1,8 +1,8 @@
 <?php
 
-use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\App;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,6 +15,4 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/{any}', function () {
-    return view('app');
-})->where('any', '.*');
+Route::get('/{any}', [App::class, 'home'])->where('any', '.*');

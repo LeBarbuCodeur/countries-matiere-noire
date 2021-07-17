@@ -38,12 +38,7 @@ const store = new Vuex.Store({
     mutations: {
         getCountry(state, code) {
             // Get the country by the code from the store
-            let country = state.countries.find(country => country.alpha3Code.toLowerCase() === code)
-
-            // Prepare languages from array to human readable string
-            country.languages = country.languages && country.languages.length
-              ? country.languages.map(lang => { return lang.name }).join(', ')
-              : ''
+            let country = state.countries.find(country => country.code === code)
 
             // Set the found & prepared country to store
             state.country = country
