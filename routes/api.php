@@ -1,7 +1,8 @@
 <?php
 
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+
+use App\Http\Controllers\Countries;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,24 +15,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/countries', function () {
-    // Get the datas from the endpoint
-    $response = Http::get('https://restcountries.eu/rest/v2/regionalbloc/eu');
+// Get countries list from the front
+Route::get('/countries', [Countries::class, 'get'])->name('get-countries');
 
-    if ($response->successful()) {
-        // Return the fetched datas
-        return response([
-            'status' => $response->status(),
-            'message' => '',
-            'datas' => $response->json(),
-        ], $response->status())->header('Content-Type', 'application/json');
-    }
-    else {
-        // Return error message
-        return response([
-            'status' => $response->status(),
-            'message' => 'Can\'t fetch datas. Skipping...',
-            'datas' => '',
-        ], $response->status())->header('Content-Type', 'application/json');
-    }
-})->name('get-countries');
+// Fetch the countries from the endpoint. Callable through a cronjob.
+Route::get('/fetch-countries', [Countries::class, 'fetch'])->name('fetch-countries');
